@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize-typescript';
 import { User } from '../models/User';
 import { Event } from '../models/Event';
 import { Ticket } from '../models/Ticket';
-import { Package } from '../models/Package';
+import { EventPackage } from '../models/EventPackage';
 import { PackageItem } from '../models/PackageItem';
 import { Payment } from '../models/Payment';
 import { SubEvent } from '../models/SubEvent';
@@ -14,7 +14,7 @@ import { EventDocument } from '../models/EventDocument';
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: './database.sqlite',
-  models: [User, Event, Ticket, Package, PackageItem, Payment, SubEvent, UserFollow, Favorite, FeaturedEvent, EventDocument],
+  models: [User, Event, Ticket, EventPackage, PackageItem, Payment, SubEvent, UserFollow, Favorite, FeaturedEvent, EventDocument],
 });
 
 export { sequelize };
