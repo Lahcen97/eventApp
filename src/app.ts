@@ -4,9 +4,19 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
-import { sequelize } from './db/sequelize';  // Assurez-vous que le chemin est correct
+import { sequelize } from './db/sequelize';
 
-import usersRouter from './routes/userRoutes';
+import userRoutes from './routes/userRoutes';
+import eventRoutes from './routes/eventRoutes';
+import eventDocumentRoutes from './routes/eventDocumentRoutes';
+import featuredEventRoutes from './routes/featuredEventRoutes';
+import ticketRoutes from './routes/ticketRoutes';
+import eventPackageRoutes from './routes/eventPackageRoutes';
+import packageItemRoutes from './routes/packageItemRoutes';
+import paymentRoutes from './routes/paymentRoutes';
+import subEventRoutes from './routes/subEventRoutes';
+import favoriteRoutes from './routes/favoriteRoutes';
+import userFollowRoutes from './routes/userFollowRoutes';
 
 const app = express();
 
@@ -28,7 +38,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/users', usersRouter);
+// Routes
+app.use('/users', userRoutes);
+app.use('/events', eventRoutes);
+app.use('/event-documents', eventDocumentRoutes);
+app.use('/featured-events', featuredEventRoutes);
+app.use('/tickets', ticketRoutes);
+app.use('/packages', eventPackageRoutes);
+app.use('/package-items', packageItemRoutes);
+app.use('/payments', paymentRoutes);
+app.use('/sub-events', subEventRoutes);
+app.use('/favorites', favoriteRoutes);
+app.use('/user-follows', userFollowRoutes);
 
 // catch 404 and forward to error handler
 app.use((req: Request, res: Response, next: NextFunction) => {
