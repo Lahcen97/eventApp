@@ -2,10 +2,10 @@ import { Table, Column, Model, DataType, CreatedAt, UpdatedAt, HasMany } from 's
 import { Ticket } from './Ticket';
 import { SubEvent } from './SubEvent';
 import { Payment } from './Payment';
-import { Package } from './Package';
 import { Favorite } from './Favorite';
 import { FeaturedEvent } from './FeaturedEvent';
 import { EventDocument } from './EventDocument';
+import { EventPackage } from './EventPackage';
 
 @Table({
   tableName: 'events',
@@ -87,8 +87,8 @@ export class Event extends Model<Event> {
   @HasMany(() => Payment)
   payments!: Payment[];
 
-  @HasMany(() => Package)
-  packages!: Package[];
+  @HasMany(() => EventPackage)
+  packages!: EventPackage[];
 
   @HasMany(() => Favorite)
   favorites!: Favorite[];

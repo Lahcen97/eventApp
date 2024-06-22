@@ -2,7 +2,7 @@ import { Table, Column, Model, DataType, CreatedAt, UpdatedAt, ForeignKey, Belon
 import { User } from './User';
 import { Event } from './Event';
 import { Ticket } from './Ticket';
-import { Package } from './Package';
+import { EventPackage } from './EventPackage';
 
 @Table({
   tableName: 'payments',
@@ -45,15 +45,15 @@ export class Payment extends Model<Payment> {
   @BelongsTo(() => Ticket)
   ticket!: Ticket;
 
-  @ForeignKey(() => Package)
+  @ForeignKey(() => EventPackage)
   @Column({
     type: DataType.INTEGER,
     allowNull: true,
   })
   packageId!: number;
 
-  @BelongsTo(() => Package)
-  package!: Package;
+  @BelongsTo(() => EventPackage)
+  package!: EventPackage;
 
   @Column({
     type: DataType.DECIMAL(10, 2),

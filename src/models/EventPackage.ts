@@ -5,7 +5,7 @@ import { PackageItem } from './PackageItem';
 @Table({
   tableName: 'packages',
 })
-export class Package extends Model<Package> {
+export class EventPackage extends Model<EventPackage> {
   @Column({
     type: DataType.INTEGER,
     autoIncrement: true,
