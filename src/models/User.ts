@@ -26,6 +26,12 @@ export class User extends Model<User> {
     type: DataType.STRING,
     allowNull: true,
   })
+  country!: string;
+
+  @Column({
+    type: DataType.STRING,
+    allowNull: true,
+  })
   oauth_provider!: string;
 
   @Column({
