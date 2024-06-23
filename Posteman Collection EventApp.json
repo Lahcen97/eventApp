@@ -1,0 +1,1227 @@
+{
+    "info": {
+      "name": "EventApp API",
+      "description": "API for EventApp",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Auth",
+        "item": [
+          {
+            "name": "Register",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"email\": \"user@example.com\",\n\t\"password\": \"password123\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/auth/register",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "auth",
+                  "register"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Login",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"email\": \"user@example.com\",\n\t\"password\": \"password123\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/auth/login",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "auth",
+                  "login"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Users",
+        "item": [
+          {
+            "name": "Get All Users",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/users",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get User by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/users/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create User",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"email\": \"newuser@example.com\",\n\t\"password\": \"password123\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/users",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update User",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"email\": \"updateduser@example.com\",\n\t\"password\": \"newpassword123\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/users/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete User",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/users/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "users",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Events",
+        "item": [
+          {
+            "name": "Get All Events",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/events",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "events"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Event by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "events",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Event",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"title\": \"New Event\",\n\t\"description\": \"Event Description\",\n\t\"location\": \"Event Location\",\n\t\"date\": \"2023-12-31T23:59:59Z\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/events",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "events"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Event",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"title\": \"Updated Event\",\n\t\"description\": \"Updated Description\",\n\t\"location\": \"Updated Location\",\n\t\"date\": \"2023-12-31T23:59:59Z\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "events",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Event",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "events",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Event Documents",
+        "item": [
+          {
+            "name": "Get All Event Documents",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/event-documents",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "event-documents"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Event Document by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/event-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "event-documents",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Event Document",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"eventId\": 1,\n\t\"document_url\": \"http://example.com/document.pdf\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/event-documents",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "event-documents"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Event Document",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"document_url\": \"http://example.com/new-document.pdf\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/event-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "event-documents",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Event Document",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/event-documents/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "event-documents",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Featured Events",
+        "item": [
+          {
+            "name": "Get All Featured Events",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/featured-events",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "featured-events"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Featured Event by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/featured-events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "featured-events",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Featured Event",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"eventId\": 1,\n\t\"country\": \"USA\",\n\t\"global\": false\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/featured-events",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "featured-events"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Featured Event",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"country\": \"Canada\",\n\t\"global\": true\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/featured-events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "featured-events",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Featured Event",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/featured-events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "featured-events",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Tickets",
+        "item": [
+          {
+            "name": "Get All Tickets",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/tickets",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "tickets"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Ticket by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/tickets/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "tickets",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Ticket",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"eventId\": 1,\n\t\"ticket_type\": \"VIP\",\n\t\"price\": 100.00,\n\t\"available\": true\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/tickets",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "tickets"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Ticket",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"ticket_type\": \"General\",\n\t\"price\": 50.00,\n\t\"available\": true\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/tickets/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "tickets",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Ticket",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/tickets/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "tickets",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Event Packages",
+        "item": [
+          {
+            "name": "Get All Event Packages",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/packages",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "packages"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Event Package by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/packages/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "packages",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Event Package",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"eventId\": 1,\n\t\"title\": \"Package Title\",\n\t\"description\": \"Package Description\",\n\t\"price\": 200.00,\n\t\"available\": true\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/packages",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "packages"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Event Package",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"title\": \"Updated Package Title\",\n\t\"description\": \"Updated Package Description\",\n\t\"price\": 150.00,\n\t\"available\": true\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/packages/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "packages",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Event Package",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/packages/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "packages",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Package Items",
+        "item": [
+          {
+            "name": "Get All Package Items",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/package-items",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "package-items"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Package Item by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/package-items/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "package-items",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Package Item",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"packageId\": 1,\n\t\"item_type\": \"Hotel\",\n\t\"item_description\": \"Hotel Description\",\n\t\"price\": 150.00\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/package-items",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "package-items"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Package Item",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"item_type\": \"Activity\",\n\t\"item_description\": \"Updated Description\",\n\t\"price\": 100.00\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/package-items/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "package-items",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Package Item",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/package-items/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "package-items",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Payments",
+        "item": [
+          {
+            "name": "Get All Payments",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/payments",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "payments"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Payment by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/payments/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "payments",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Payment",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"userId\": 1,\n\t\"amount\": 100.00,\n\t\"payment_date\": \"2023-12-31T23:59:59Z\",\n\t\"payment_status\": \"Completed\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/payments",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "payments"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Payment",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"amount\": 150.00,\n\t\"payment_status\": \"Pending\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/payments/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "payments",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Payment",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/payments/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "payments",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Sub Events",
+        "item": [
+          {
+            "name": "Get All Sub Events",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/sub-events",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "sub-events"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Sub Event by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/sub-events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "sub-events",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Sub Event",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"eventId\": 1,\n\t\"title\": \"Sub Event Title\",\n\t\"description\": \"Sub Event Description\",\n\t\"location\": \"Sub Event Location\",\n\t\"date\": \"2023-12-31T23:59:59Z\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/sub-events",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "sub-events"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Sub Event",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"title\": \"Updated Sub Event Title\",\n\t\"description\": \"Updated Sub Event Description\",\n\t\"location\": \"Updated Sub Event Location\",\n\t\"date\": \"2023-12-31T23:59:59Z\"\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/sub-events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "sub-events",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Sub Event",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/sub-events/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "sub-events",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "Favorites",
+        "item": [
+          {
+            "name": "Get All Favorites",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/favorites",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "favorites"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get Favorite by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/favorites/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "favorites",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create Favorite",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"userId\": 1,\n\t\"eventId\": 1\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/favorites",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "favorites"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update Favorite",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"userId\": 2,\n\t\"eventId\": 1\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/favorites/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "favorites",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete Favorite",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/favorites/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "favorites",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "User Follows",
+        "item": [
+          {
+            "name": "Get All User Follows",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/user-follows",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "user-follows"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Get User Follow by ID",
+            "request": {
+              "method": "GET",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/user-follows/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "user-follows",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Create User Follow",
+            "request": {
+              "method": "POST",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"followerId\": 1,\n\t\"followeeId\": 2\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/user-follows",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "user-follows"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Update User Follow",
+            "request": {
+              "method": "PUT",
+              "header": [],
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\t\"followerId\": 2,\n\t\"followeeId\": 3\n}"
+              },
+              "url": {
+                "raw": "http://localhost:3000/user-follows/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "user-follows",
+                  ":id"
+                ]
+              }
+            }
+          },
+          {
+            "name": "Delete User Follow",
+            "request": {
+              "method": "DELETE",
+              "header": [],
+              "url": {
+                "raw": "http://localhost:3000/user-follows/:id",
+                "protocol": "http",
+                "host": [
+                  "localhost"
+                ],
+                "port": "3000",
+                "path": [
+                  "user-follows",
+                  ":id"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
