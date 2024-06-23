@@ -7,6 +7,7 @@ import logger from 'morgan';
 import { sequelize } from './config/sequelize';
 
 import userRoutes from './routes/userRoutes';
+import authRoutes from './routes/authRoutes';
 import eventRoutes from './routes/eventRoutes';
 import eventDocumentRoutes from './routes/eventDocumentRoutes';
 import featuredEventRoutes from './routes/featuredEventRoutes';
@@ -50,6 +51,7 @@ app.use('/payments', paymentRoutes);
 app.use('/sub-events', subEventRoutes);
 app.use('/favorites', favoriteRoutes);
 app.use('/user-follows', userFollowRoutes);
+app.use('/auth', authRoutes);
 
 // catch 404 and forward to error handler
 app.use((req: Request, res: Response, next: NextFunction) => {

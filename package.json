@@ -7,11 +7,13 @@
     "start": "ts-node src/app.ts"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "~1.9.1",
     "reflect-metadata": "^0.2.2",
     "sequelize": "^6.37.3",

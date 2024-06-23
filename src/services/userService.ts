@@ -1,7 +1,13 @@
 import { User } from '../models/User';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+
+const JWT_SECRET = 'The secret will be in a .env file'; 
 
 export class UserService {
   static async createUser(data: any) {
+    const salt = await bcrypt.genSalt(10);
+    data.password = await bcrypt.hash(data.password, salt);
     return await User.create(data);
   }
 
@@ -28,5 +34,49 @@ export class UserService {
     } else {
       throw new Error('User not found');
     }
+  }
+
+  static async register(name: string, email: string, password: string) {
+    let user = await User.findOne({ where: { email } });
+    if (user) {
+      throw new Error('User already exists');
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
+
+    user = await User.create({ name, email, password: hashedPassword });
+
+    const payload = {
+      user: {
+        id: user.id
+      }
+    };
+
+    const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });
+    return { user, token };
+  }
+
+  static async login(email: string, password: string) {
+    const user = await User.findOne({ where: { email } });
+
+    if (!user) {
+      throw new Error('Invalid Credentials');
+    }
+
+    const isMatch = await bcrypt.compare(password, user.password);
+
+    if (!isMatch) {
+      throw new Error('Invalid Credentials');
+    }
+
+    const payload = {
+      user: {
+        id: user.id
+      }
+    };
+
+    const token = jwt.sign(payload, JWT_SECRET, { expiresIn: '1h' });
+    return { user, token };
   }
 }
