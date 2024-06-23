@@ -1,7 +1,22 @@
 ```markdown
 # EventApp
 
-EventApp is an example of an Express.js application using Sequelize ORM and SQLite as the database. It demonstrates basic CRUD operations for user management.
+EventApp is a comprehensive event management application built with Express.js, Sequelize ORM, and SQLite. It supports various functionalities like user management, event management, ticketing, and more.
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [API Endpoints](#api-endpoints)
+  - [User Routes](#user-routes)
+  - [Event Routes](#event-routes)
+  - [Other Routes](#other-routes)
+- [Project Structure](#project-structure)
+- [Database Inspection](#database-inspection)
+- [Dependencies](#dependencies)
+- [License](#license)
 
 ## Prerequisites
 
@@ -32,12 +47,14 @@ Before you begin, ensure you have met the following requirements:
 1. Start the application:
 
    ```sh
-   node app.js
+   npm start
    ```
 
 2. The application will be running at `http://localhost:3000`.
 
-### API Endpoints
+## API Endpoints
+
+### User Routes
 
 #### Create a User
 
@@ -80,23 +97,35 @@ Before you begin, ensure you have met the following requirements:
   ]
   ```
 
+### Event Routes
+
+- **URL:** `POST /events`
+- **Body:** Similar to user creation but for events.
+- **Response:** Event object created.
+
+### Other Routes
+
+- Refer to the source code for specific details on routes like `/tickets`, `/packages`, `/payments`, etc.
+
 ## Project Structure
 
 ```plaintext
 eventApp/
-├── db/
-│   └── sequelize.js        # Sequelize configuration and initialization
-├── models/
-│   └── User.js             # Sequelize model definition for the User
-├── routes/
-│   ├── index.js            # Route definitions for the home page
-│   └── users.js            # Route definitions for user-related endpoints
-├── views/
-│   └── error.jade          # Error view template
-├── database.sqlite         # SQLite database file
-├── app.js                  # Main application file
-├── package.json            # Project metadata and dependencies
-└── README.md               # Project documentation
+├── src/
+│   ├── bin/                       # Application startup scripts
+│   ├── config/                    # Configuration files
+│   ├── controllers/               # Route controllers
+│   ├── middleware/                # Custom middleware
+│   ├── models/                    # Sequelize models
+│   ├── routes/                    # Route definitions
+│   ├── services/                  # Business logic and services
+│   ├── utils/                     # Utility functions
+│   └── app.ts                     # Main application file
+├── database.sqlite                # SQLite database file
+├── Dockerfile                     # Docker configuration
+├── package.json                   # Project metadata and dependencies
+├── tsconfig.json                  # TypeScript configuration
+└── README.md                      # Project documentation
 ```
 
 ## Database Inspection
@@ -130,7 +159,8 @@ Alternatively, you can use a GUI tool like **DB Browser for SQLite**:
 - morgan
 - cookie-parser
 - http-errors
-- path
+- typescript
+- ts-node
 
 ## License
 
@@ -152,3 +182,5 @@ This project is licensed under the MIT License.
      git commit -m "Add README.md"
      git push origin main
      ```
+
+This `README.md` provides a comprehensive guide to setting up and running your application, including API endpoint documentation and instructions for inspecting the SQLite database.
