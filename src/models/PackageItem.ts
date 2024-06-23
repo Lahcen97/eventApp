@@ -1,5 +1,5 @@
 import { Table, Column, Model, DataType, CreatedAt, UpdatedAt, ForeignKey, BelongsTo } from 'sequelize-typescript';
-import { Package } from './Package';
+import { EventPackage } from './EventPackage';
 
 @Table({
   tableName: 'package_items',
@@ -12,15 +12,15 @@ export class PackageItem extends Model<PackageItem> {
   })
   id!: number;
 
-  @ForeignKey(() => Package)
+  @ForeignKey(() => EventPackage)
   @Column({
     type: DataType.INTEGER,
     allowNull: false,
   })
   packageId!: number;
 
-  @BelongsTo(() => Package, 'packageId')
-  package!: Package;
+  @BelongsTo(() => EventPackage, 'packageId')
+  package!: EventPackage;
 
   @Column({
     type: DataType.STRING,
