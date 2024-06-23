@@ -4,7 +4,7 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
-import { sequelize } from './db/sequelize';
+import { sequelize } from './config/sequelize';
 
 import userRoutes from './routes/userRoutes';
 import eventRoutes from './routes/eventRoutes';
